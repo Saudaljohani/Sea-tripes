@@ -1,0 +1,114 @@
+{% extends 'SeaTripesapp/home.html' %}
+
+
+{% block content %}
+   
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+body{
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+      35deg,
+      #ccffff,
+      #062a35
+    );
+}
+
+#survey-form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#survey-form label{
+  margin-top: 20px;
+}
+
+#survey-form input, select, textarea{
+  border: none;
+  background-color: white;
+  padding: 20px;
+  width:500px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+#submit{
+  border: none;
+  padding: 20px 40px;
+  background: linear-gradient(
+    45deg,
+    rgb(226, 231, 233),
+    white
+  );
+  border-radius: 20px;
+}
+
+button{
+  font-weight: 900;
+}
+
+#survey-form select{
+  border: none;
+  background-color: white;
+  padding: 20px;
+  width:540px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+span{
+  color: rgb(33, 159, 218);
+}
+.sexs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fruits{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media(max-width: 650px){
+  #survey-form input, textarea{
+    width: 250px;
+  }
+  #survey-form select{
+  width: 295px;
+}
+}
+</style>
+<h1 id="title">Add New Captain</h1>
+
+<form action="" method="POST" id="survey-form">
+    {% csrf_token %}
+  <label for="name" >Name<span>*</span><br>
+  <input type="text" name="name_Captain" required placeholder="Please put your name here">
+  </label>
+  <label for="description" >description<span>*</span><br>
+  <input type="text" name="dec_Captain" required placeholder="">
+  </label>
+  <label for="number" id="number-label">Age<span>*</span><br>
+  <input type="number" id="number" name="age_Captain" required placeholder="Please put your age here">
+  </label>
+  
+  <label for="submit">
+    <button type="submit" id="submit">SUBMIT</button>
+  </label>
+</form>
+<br>
+<br><br><br><br>
+{% endblock %}

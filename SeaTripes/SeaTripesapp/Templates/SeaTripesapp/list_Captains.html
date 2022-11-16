@@ -1,0 +1,38 @@
+{% extends 'SeaTripesapp/home.html' %}
+
+
+
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<h1>all Captains</h1>
+<div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          ...
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          ...
+        </tr>
+        <tr class="align-bottom">
+          ...
+        </tr>
+        <tbody>
+            {% for post in Captains %}
+        <tr>
+          <td>{{ post.name_Captain }}</td>
+                <td>{{ post.age_Captain }}</td>
+                <td>{{ post.dec_Captain }}</td>
+                <td>
+          
+          <td class="align-top">//.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endblock %}
