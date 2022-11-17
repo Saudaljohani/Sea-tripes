@@ -262,6 +262,7 @@ nav ul ul ul {
       <li><a href="{% url 'SeaTripesapp:home_page' %}">Home</a></li>
       <li><a href="{% url 'accounts:login_user'%}">log in</a></li>
       <li><a href="{% url 'accounts:logout_user'%}">log out</a></li>
+    
       <li><a href="{% url 'SeaTripesapp:about_us' %}">about us</a></li>
       <li><a href="{% url 'SeaTripesapp:contact' %}">contact</a></li>
       
@@ -471,35 +472,21 @@ body {
         <main class="page-content">
             <div class="card">
               <div class="content">
-                <h2 class="title"> Sea Trips</h2>
-                <p class="copy">sea ​tripes</p>
-                <a class="btn btn-primary" href="{% url 'SeaTripesapp:marina_page' %}" role="button">Start</a>
+                <h2 class="title">Captains </h2>
+                <p class="copy"> to viwe Captain</p>
+                <a class="btn btn-primary" href="{% url 'SeaTripesapp:list_Captains' %}" role="button">viwe</a>
                </div>
             </div>
 
             <div class="card">
               <div class="content">
-                <h2 class="title">Captain</h2>
-                <p class="copy">to add new Captain to you</p>
-                <a class="btn btn-primary" href="{% url 'SeaTripesapp:add_Captain' %}" role="button">add Captain</a>
-               </div>
-            </div>
-
-            <div class="card">
-              <div class="content">
-                <h2 class="title">Trips </h2>
-                <p class="copy">to add new trip to you</p>
-                <a class="btn btn-primary" href="{% url 'SeaTripesapp:add_trip' %}" role="button">add trip</a>
-               </div>
-            </div>
-
-            <div class="card">
-              <div class="content">
-                <h2 class="title">all of list</h2>
+                <h2 class="title">trips</h2>
                 <p class="copy"></p>
-                <a class="btn btn-primary" href="{% url 'SeaTripesapp:list_viwe' %}" role="button">to viwe list</a>
+                <a class="btn btn-primary" href="{% url 'SeaTripesapp:list_trip' %}" role="button">viwe</a>
                </div>
             </div>
+
+            
           </main>
           
     </body>

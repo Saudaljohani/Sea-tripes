@@ -21,6 +21,10 @@ def contact(request:HttpRequest):
 
     return render(request,"SeaTripesapp/contact.html")
 
+def list_viwe(request:HttpRequest):
+
+    return render(request,"SeaTripesapp/list_viwe.html")
+
 
 #to add Captain
 def add_Captain(request : HttpRequest):
@@ -35,7 +39,7 @@ def add_Captain(request : HttpRequest):
 ##add trip 
 def add_trip(request : HttpRequest):
     if request.method == "POST":
-        new_trip=Trip(titile=request.POST["titile"],dec=request.POST["dec"],date=request.POST["date"],pic=request.FILES["pic"])
+        new_trip=Trip(titile=request.POST["titile"],dec=request.POST["dec"],date=request.POST["date"])
         new_trip.save()
     return render(request, "SeaTripesapp/add_trip.html")
 
